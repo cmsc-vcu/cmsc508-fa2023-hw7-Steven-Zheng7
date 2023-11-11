@@ -490,7 +490,4 @@ df
 
 ## Reflection
 
-I would say this assignment was definitely more fun comapred to some of the other assignments. I personally enjoy joinning tables together and develope a way to get a particular data and learning more about sql select statements by experience. As of completetion of this assignment, I feel really satisfied and happy because I enjoy pulling data from the database that I kind of what to do some more. It feels also as if I was a kid again and completing my first ever puzzle. One could say I am somewhat "hook" on doing this. OVerall, it was a really enjoyab;e learning experience. 
-
-
-
+I would say this assignment was definitely more fun comapred to some of the other assignments. I personally enjoy joinning tables together and develope a way to get a particular data and learning more about sql select statements by experience. As of completetion of this assignment, I feel really satisfied and happy because I enjoy pulling data from the database that I kind of what to do some more. It feels also as if I was a kid again and completing my first ever puzzle. One could say I am somewhat "hook" on doing this. OVerall, it was a really enjoyab;e learning experience.
