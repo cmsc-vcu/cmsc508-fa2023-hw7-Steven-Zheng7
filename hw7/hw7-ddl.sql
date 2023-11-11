@@ -21,7 +21,7 @@ DROP TABLE IF EXISTS people;
 DROP TABLE IF EXISTS skills;
 DROP TABLE IF EXISTS peopleskills;
 DROP TABLE IF EXISTS roles;
-DROP TABLE IF EXISTS people_role;
+DROP TABLE IF EXISTS peopleroles;
 # ... 
 SET FOREIGN_KEY_CHECKS=1;
 
@@ -132,26 +132,24 @@ INSERT INTO peopleskills (peopleskills_ID, skill_id, people_id, date_acquired) v
     (6, 5, 2, '2023-07-03'),
     (7, 1, 3, '2023-02-11'),
     (8, 5, 3, '2023-02-08'),
-    (9, 0, 4, '1111-11-11'),
-    (10, 3, 5, '2023-11-08'),
-    (11, 6, 5, '2023-11-08'),
-    (12, 2, 6, '2023-03-20'),
-    (13, 3, 6, '2023-03-21'),
-    (14, 4, 6, '2023-03-30'),
-    (15, 3, 7, '2023-03-20'),
-    (16, 5, 7, '2023-03-22'),
-    (17, 6, 7, '2023-03-23'),
-    (18, 1, 8, '2023-04-01'),
-    (19, 3, 8, '2023-04-02'),
-    (20, 5, 8, '2023-04-03'),
-    (21, 6, 8, '2023-04-04'),
-    (22, 2, 9, '2023-05-19'),
-    (23, 5, 9, '2023-05-18'),
-    (24, 6, 9, '2023-05-17'),
-    (25, 1, 10, '2023-06-17'),
-    (26, 4, 10, '2023-06-16'),
-    (27, 5, 10, '2023-06-17');
-
+    (9, 3, 5, '2023-11-08'),
+    (10, 6, 5, '2023-11-08'),
+    (11, 2, 6, '2023-03-20'),
+    (12, 3, 6, '2023-03-21'),
+    (13, 4, 6, '2023-03-30'),
+    (14, 3, 7, '2023-03-20'),
+    (15, 5, 7, '2023-03-22'),
+    (16, 6, 7, '2023-03-23'),
+    (17, 1, 8, '2023-04-01'),
+    (18, 3, 8, '2023-04-02'),
+    (19, 5, 8, '2023-04-03'),
+    (20, 6, 8, '2023-04-04'),
+    (21, 2, 9, '2023-05-19'),
+    (22, 5, 9, '2023-05-18'),
+    (23, 6, 9, '2023-05-17'),
+    (24, 1, 10, '2023-06-17'),
+    (25, 4, 10, '2023-06-16'),
+    (26, 5, 10, '2023-06-17');
 
 # Section 8
 # Create roles( id, name, sort_priority )
@@ -183,7 +181,7 @@ INSERT INTO roles (role_id, role_name, sort_priority) values
 # Create peopleroles( id, people_id, role_id, date_assigned )
 # None of the fields can be null.  ID can be auto_increment
 
-CREATE TABLE people_role (
+CREATE TABLE peopleroles (
     people_role_id int NOT NULL,
     people_id int NOT NULL,
     role_id int NOT NULL,
@@ -205,7 +203,7 @@ CREATE TABLE people_role (
 # Person 9 is Developer
 # Person 10 is Developer and Designer
 
-INSERT INTO people_role (people_role_id, people_id, role_id, date_assigned) values 
+INSERT INTO peopleroles (people_role_id, people_id, role_id, date_assigned) values 
     (1, 1, 2, '2023-09-02'),
     (2, 2, 5, '2023-05-01'),
     (3, 2, 6, '2023-05-01'),

@@ -348,7 +348,7 @@ select
     people_first_name,
     people_last_name
 from 
-    people_role a
+    peopleroles a
     inner join people b on (a.people_id=b.people_id)
     inner join roles c on (c.role_id=a.role_id)
 where 
@@ -379,10 +379,10 @@ select
     people_last_name,
     people_email
 from 
-    peopleskills a
-    inner join people b on (a.people_id=b.people_id)
+    people a
+    left join peopleskills b on (a.people_id=b.people_id)
 where 
-    a.skill_id = 0
+    b.skill_id is NULL
     ;
 """
 ## Add code to list roles table here
@@ -439,7 +439,7 @@ select
     people_last_name,
     skill_name
 from
-    people_role b
+    peopleroles b
     inner join people a on (a.people_id=b.people_id)
     inner join roles c on (b.role_id=c.role_id)
     inner join peopleskills d on (b.people_id=d.people_id)
@@ -472,7 +472,7 @@ select
     a.role_name
 from 
     roles a
-    left join people_role b on (b.role_id=a.role_id)
+    left join peopleroles b on (b.role_id=a.role_id)
 Where
     a.role_id is NULL
     ;
